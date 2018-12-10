@@ -1,6 +1,12 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+client.on('ready', () => { 
+  console.log(`Loggen in As ${client.user.username}`)
+ client.user.setGame(`Medoo ${client.guilds.size} Guild's`, "https://twitch.tv/MeDoo")
+ client.user.setStatus(`Idle`)
+});
+
 client.on('message',async message => {
   if(message.content === '+banall') {
     var user = message.mentions.users.first();
@@ -23,3 +29,6 @@ client.on('message',async message => {
   });
   }
   });
+
+
+client.login(process.env.BOT_TOKEN);
