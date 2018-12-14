@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => { 
   console.log(`Loggen in As ${client.user.username}`)
- client.user.setGame(`Medoo ${client.guilds.size} Guild's`, "https://twitch.tv/MeDoo")
+ client.user.setGame(`Medoo "https://twitch.tv/MeDoo")
  client.user.setStatus(`Idle`)
 });
 
